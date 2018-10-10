@@ -1,9 +1,3 @@
-# # measurment = input('Please choose  your measurment system: Metric or imperial')
-# print('Please choose  your measurment system: Metric or Imperial')
-
-
-
-# height =float(input('Enter your height '))
 def main_menu():
 
     choice ='0'

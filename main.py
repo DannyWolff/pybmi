@@ -7,19 +7,34 @@ def main_menu():
         print("2 Imperial")
         print("3 Quit")
 
-        choice = input ("Please make a choice: ")
+        choice = input ("\nPlease make a choice: ")
 
         if choice == "1":
-            print("Metric")
+            print("Metric\n")
+            calc_bmi_metric()
         elif choice == "2":
-            print("Imperial")
+            print("Imperial\n")
+            calc_bmi_imperial()
         elif choice == "3":
             break
         else:
             print("Please enter 1 or 2.")
             main_menu()
 
-def second_menu():
-    pass
+def calc_bmi_metric():
+    weight = float(input('Enter your weight: '))
+    height = float(input('Enter your height: '))
+
+    bmi_metric = weight/((height**2)/(100**2))
+    
+    print("{:0.2f}".format(bmi_metric))
+
+def calc_bmi_imperial():
+    weight = float(input('Enter your weight: '))
+    height = float(input('Enter your height: '))
+
+    bmi_imperial = (weight/((height**2)))*703
+    
+    print("{:0.2f}".format(bmi_imperial))
 
 main_menu()
